@@ -1,0 +1,9 @@
+I had a lot of problems making the esp boot into normal mode when GPIO2 was not high on startup.
+The solution was to use the 2N3904 as a switch, and delay the start of the light sensor module.  
+R1C1 holds the base of the transistor low long enough to let the esp module start before the light sensor may provide a low to GPIO2.
+
+MQTT Topics
+attic/light_status
+attic/heatindex
+attic/humidity
+attic/temperature
